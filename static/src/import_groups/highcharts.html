@@ -1,0 +1,12 @@
+<!--Don't load it this way:-->
+<!--<script src="../node_modules/highcharts/highcharts.js"></script>
+<script src="../node_modules/highcharts/highstock.js"></script>-->
+
+<!--Reference: http://www.highcharts.com/docs/getting-started/install-from-npm-->
+<script>
+    // I don't even know where "require" is defined. I think in Electron.
+    // highstock includes highcharts
+    var Highcharts = require('highcharts/highstock');
+    // Highmaps doesn't include highcharts. Load Highmaps as a module
+    // require('highcharts/modules/map')(Highcharts);
+</script>

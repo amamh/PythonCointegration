@@ -1,0 +1,29 @@
+<link rel="import" href="../bower_components/paper-date-picker/paper-date-picker.html">
+<link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<dom-module id="date-pick">
+
+  <template>
+
+  <paper-menu-button>
+    <paper-button raised class="dropdown-trigger green" >[[_format_date(date)]]</paper-button>
+    <paper-date-picker id="date" date="{{date}}" class="dropdown-content">
+    </paper-date-picker>
+  </paper-menu-button>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'date-pick',
+      properties: {
+        date: String,
+      },
+      _format_date: function(date) {
+        return date.toDateString();
+      }
+    });
+  </script>
+
+</dom-module>

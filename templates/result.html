@@ -1,0 +1,21 @@
+<h3>Cointegration from {{ date.date() }} until today. Running on symbols:</h3>
+
+{% for symbol in symbols %}
+    <ul> {{ symbol }} </ul>
+{% endfor %}
+
+<h4>Cointegration scores heatmap</h4>
+
+<img src="{{ coint_heatmap }}" alt="cointegration scores" >
+
+<h4>Summary for worthwhile trades</h4>
+
+<div> {{ summary.to_html(classes="table")|safe }} </div>
+
+{% for name_and_path in plots %}
+
+<h4> {{name_and_path[0]}} </h4>
+
+<img src="{{name_and_path[1]}}">
+
+{% endfor %}
