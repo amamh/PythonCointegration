@@ -27,7 +27,7 @@ def calc():
 
     # generate random request id
     request_id = randint(0, 10000000000)
-    loc = "static\\"+str(request_id)
+    loc = os.path.join("static", str(request_id))
 
     if os.path.exists(loc):
         os.removedirs(loc)
