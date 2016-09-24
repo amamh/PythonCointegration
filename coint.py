@@ -2,6 +2,11 @@
 # import matplotlib.dates as mdates
 # from pandas.tseries.offsets import BDay
 # import scipy
+
+# have to disable qt backend completey if you want this to keep running on the server
+import matplotlib
+matplotlib.use('Agg')
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import datetime as dt
