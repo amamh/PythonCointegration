@@ -1,39 +1,41 @@
 :host {
-  display: block;
+    display: block;
 }
 
 .nav {
-  border-right: 1px solid #ccc;
+    border-right: 1px solid #ccc;
 }
 
 .main {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 paper-toolbar {
-  background-color: #42A5F5;
+    background-color: #42A5F5;
 }
 
 .content {
-  padding: 0 16px;
+    padding: 0 16px;
 }
 
 paper-material {
-  padding:2em;
-  max-width: 1024px;
-  margin: 16px auto;
-  background-color: #fff;
+    padding: 2em;
+    max-width: 1024px;
+    margin: 16px auto;
+    background-color: #fff;
 }
 
 paper-button.green {
-  background-color: var(--paper-green-500);
-  color: white;
+    background-color: var(--paper-green-500);
+    color: white;
 }
+
 paper-button.red {
-  background-color: var(--paper-red-500);
-  color: white;
+    background-color: var(--paper-red-500);
+    color: white;
 }
+
 paper-button.blue {
-  background-color: var(--paper-blue-500);
-  color: white;
+    background-color: var(--paper-blue-500);
+    color: white;
 }
