@@ -116,19 +116,19 @@ def extract_graph_data(pair_df, name1, name2):
 @timeit()
 @logit()
 # @persist_to_file()
-def get_stock_ql(code):
+def get_stock_ql(code, start_date):
     # TODO: Get date = now - 1 year
-    onlinedata = ql.get(code, start_date="2015-06-16")
+    onlinedata = ql.get(code, start_date=start_date.strftime('%d/%m/%Y'))
     s = pd.DataFrame(onlinedata)['Close']
     s.name = code
     return s
 
 
-def run_coint(stock_names, folder_to_save):
+def run_coint(stock_names, start_date, folder_to_save):
     clear_log('coint.log')
 
     # dataframe holding date/price for each stock
-    price_df = pd.concat([get_stock_ql(stock) for stock in stock_names], axis=1)  # type: pd.DataFrame
+    price_df = pd.concat([get_stock_ql(stock, start_date) for stock in stock_names], axis=1)  # type: pd.DataFrame
     # coint score per pair
     coint_df = pd.DataFrame(index=stock_names, columns=stock_names)
     # ticker1 price, ticker2 price, ticker2 price from ticker1 price, error

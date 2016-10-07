@@ -33,7 +33,7 @@ def calc():
         os.removedirs(loc)
     os.makedirs(loc)
 
-    result = run_coint(symbols, loc)
+    result = run_coint(symbols, date, loc)
 
     return render_template('result.html', symbols=symbols, date=date, coint_heatmap=loc+"/heatmap.png",
                            summary=result[0], plots=result[1])
