@@ -24,3 +24,16 @@ paper-material {
   margin: 16px auto;
   background-color: #fff;
 }
+
+paper-button.green {
+  background-color: var(--paper-green-500);
+  color: white;
+}
+paper-button.red {
+  background-color: var(--paper-red-500);
+  color: white;
+}
+paper-button.blue {
+  background-color: var(--paper-blue-500);
+  color: white;
+}

@@ -1,27 +1,12 @@
 <!--external stuff-->
 <link rel="import" href="import_groups/all.html">
+
 <!--my own components-->
 <link rel="import" href="components/date-pick.html">
 
 <dom-module id="x-app">
 
   <link rel="import" type="css" href="x-app.css">
-
-  <style is="custom-style">
-    paper-button.green {
-      background-color: var(--paper-green-500);
-      color: white;
-    }
-    paper-button.red {
-      background-color: var(--paper-red-500);
-      color: white;
-    }
-    paper-button.blue {
-      background-color: var(--paper-blue-500);
-      color: white;
-    }
-
-  </style>
 
   <template>
 
@@ -48,8 +33,6 @@
 
             <label>Date from</label>
             <date-pick id="date"></date-pick>
-
-
 
             <paper-dialog id="dialog" class="paper-date-picker-dialog" modal on-iron-overlay-closed="dismissDialog">
 
@@ -102,14 +85,7 @@
     });
 
   </script>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
-
-  <style is="custom-style">
-    paper-button.green {
-      background-color: var(--paper-green-500);
-      color: white;
-    }
-  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
 
 </dom-module>
