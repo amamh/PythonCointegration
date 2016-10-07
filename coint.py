@@ -186,7 +186,7 @@ def run_coint(stock_names, start_date, folder_to_save):
                         # FIXME: horrible hack
                         pair_graph_data.plot()
 
-                        plot_path = path.join(folder_to_save, "plot_{0}.png".format(i))
+                        plot_path = path.join(folder_to_save, "plot_{0}.png".format(i*len(stock_names) + j))
                         plots_paths.append(plot_path)
                         plt.savefig(plot_path)
 
